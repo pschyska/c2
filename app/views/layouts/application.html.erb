@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>C2</title>
+  <%= stylesheet_link_tag    "http://cdn.sencha.io/ext-4.0.7-gpl/resources/css/ext-all.css" %>
+  <%= javascript_include_tag "http://cdn.sencha.io/ext-4.0.7-gpl/ext-all.js" %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

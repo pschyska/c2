@@ -1,0 +1,19 @@
+Ext.define('Cumulus.store.<%= @models_name %>', {
+  extend: 'Ext.data.Store',
+  model: 'Cumulus.model.<%= @models_name.singularize %>',
+  autoLoad: true,
+  proxy: {
+    type: 'ajax',
+    url: '/<%= @models_name.downcase %>.json',
+    reader: {
+      type: 'json',
+      root: 'records',
+      successProperty: 'success'
+    },
+    writer: {
+      type: 'json',
+      root: 'record',
+      successProperty: 'success'
+    }
+  }
+});
